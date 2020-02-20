@@ -3,6 +3,6 @@ import thunk from 'redux-thunk';
 import rootReducer from './../reducers/main.js';
 import exampleVideoData from '../data/exampleVideoData.js';
 
-var store = createStore(rootReducer, [{ currentVideo: null }, { videoList: [] }], applyMiddleware(thunk));
+var store = createStore(rootReducer, { currentVideo: null, videoList: [] }, applyMiddleware(thunk));
 
 export default store;

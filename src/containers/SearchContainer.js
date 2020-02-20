@@ -1,16 +1,19 @@
 import { connect } from 'react-redux';
 import Search from './../components/Search.js';
-import handleSearchChange from '../actions/search.js';
+import handleVideoSearch from '../actions/search.js';
 
 var mapStateToProps = (state) => {
-  var searchValue = state[2].searchValue;
-  return { searchValue: searchValue };
+  return { searchInput: state.searchInput };
 };
 
 var mapDispatchToProps = (dispatch) => {
-
+  return {
+    handleSearchInputChange: (q) => {
+      dispatch(handleVideoSearch(q));
+    }
+  };
 };
 
-var SearchContainer = connect(mapStateToProps)(Search);
+var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
 
 export default SearchContainer;

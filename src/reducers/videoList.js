@@ -1,15 +1,8 @@
 import Redux from 'redux';
 
-var videoListReducer = (state = sampleData, action) => {
+var videoListReducer = (state = [], action) => {
   if (action.type === 'CHANGE_VIDEO_LIST') {
-    var newState = state.map((obj) => {
-      if (obj.videoList) {
-        return { videoList: action.videos };
-      } else {
-        return obj;
-      }
-    });
-    return newState;
+    return action.videos;
   } else {
     return state;
   }
