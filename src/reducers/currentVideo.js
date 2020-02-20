@@ -1,15 +1,8 @@
 import Redux from 'redux';
 
-var currentVideoReducer = (state, action) => {
+var currentVideoReducer = (state = null, action) => {
   if (action.type === 'CHANGE_VIDEO') {
-    var newState = state.map((obj) => {
-      if (obj.currentVideo) {
-        return { currentVideo: action.video };
-      } else {
-        return obj;
-      }
-    });
-    return newState;
+    return action.video;
   } else {
     return state;
   }
