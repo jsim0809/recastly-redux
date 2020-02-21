@@ -14,6 +14,6 @@ var mapDispatchToProps = (dispatch) => {
   };
 };
 
-var VideoListContainer = connect(mapStateToProps, null)(VideoList);
+var VideoListContainer = connect(mapStateToProps, mapDispatchToProps)(VideoList);
 
 export default VideoListContainer;

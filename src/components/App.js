@@ -1,16 +1,12 @@
 import React from 'react';
-import VideoListContainer from './VideoList.js';
-import VideoPlayerContainer from './VideoPlayer.js';
-import SearchContainer from './Search.js';
+import VideoListContainer from '../containers/VideoListContainer.js';
+import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
+import SearchContainer from '../containers/SearchContainer.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
-
-  // componentDidMount() {
-  //   this.getYouTubeVideos('react tutorials');         ///
-  // }
 
   render() {
     return (
